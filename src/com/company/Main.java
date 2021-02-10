@@ -26,7 +26,9 @@ public class Main {
             current= Math.max(current,nextX);
             System.out.println("Current:"+current+" X1,X2:"+x11+" "+x12+"\n");
 	    System.out.println("Result index: "+ i);
+	    
         }
+	System.out.println("The calculations ends");
 
     }
 
