@@ -15,6 +15,8 @@ public class ShipGenetator implements Runnable {
     private int shipCount;
 
     public ShipGenetator(Tunnel tunnel, int shipCounter){
+        this.tunnel=tunnel;
+        this.shipCount=shipCounter;
 
     }
 
@@ -24,9 +26,11 @@ public class ShipGenetator implements Runnable {
         while (count<shipCount){
             Thread.currentThread().setName(" Generate Ship");
             count++;
-            tunnel.add(new Ship(getRandomSize(), getRandomType()));
+            tunnel.add(new Ship(getRandomSize(),getRandomType()));
+            System.out.println("Ship generated");
             try {
                 Thread.sleep(1000);
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
